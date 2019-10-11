@@ -1,0 +1,9 @@
+logging:
+  level.root: info
+
+#数据库配置##################################
+spring:
+  datasource:
+    url: jdbc:mysql://rukiy.myds.me:3307/rboot?useUnicode=true&characterEncoding=utf8
+    username: rukiy
+    password: teaofleaf

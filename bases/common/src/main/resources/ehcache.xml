@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xmlns='http://www.ehcache.org/v3'
+		xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.1.xsd">
+	
+
+	<cache alias="min" uses-template="heap-cache">
+		<expiry>
+			<ttl unit="minutes">30</ttl>
+		</expiry>
+	</cache>
+	
+	<cache alias="max" uses-template="heap-cache">
+		<expiry>
+			<ttl unit="days">365</ttl>
+		</expiry>
+	</cache>
+	
+	
+	<cache-template name="heap-cache">
+		<resources>
+			<heap unit="entries">2000</heap>
+			<offheap unit="MB">100</offheap>
+		</resources>
+	</cache-template>
+	
+</config>
